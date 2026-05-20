@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barsha Baishakhi Prusty | Python Full Stack Developer</title>
+  <meta name="description" content="Python Full Stack Developer skilled in Python, Django, React.js, REST APIs and more." />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./Portfolio.css" />
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">BBP</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing portfolio...</p>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ========== PARTICLE CANVAS ========== -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>BBP<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link active">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#projects"class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+
+    <!-- Floating Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span> Available for Hire
+      </div>
+      <h1 class="hero-name reveal-up">
+        Hi, I'm<br/>
+        <span class="name-highlight">Barsha Baishakhi</span><br/>
+        <span class="name-last">Prusty</span>
+      </h1>
+      <div class="hero-role reveal-up">
+        <span class="role-static">I'm a </span>
+        <span class="typing-text" id="typingText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-tagline reveal-up">
+        Crafting elegant, scalable web solutions with Python &amp; modern frontends.<br/>
+        <em>Turning ideas into powerful digital experiences.</em>
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#" class="btn btn-primary" id="resumeDownload">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="https://github.com/barshabaishakhi-pythonfs" target="_blank" class="btn btn-glass">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/barsha-baishakhi-prusty-675580323" target="_blank" class="btn btn-glass">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Hire Me
+        </a>
+      </div>
+      <!-- Floating tech chips -->
+      <div class="floating-chips">
+        <span class="chip chip-1"><i class="fab fa-python"></i> Python</span>
+        <span class="chip chip-2"><i class="fab fa-react"></i> React</span>
+        <span class="chip chip-3"><i class="fab fa-js-square"></i> JavaScript</span>
+        <span class="chip chip-4">Django</span>
+        <span class="chip chip-5"><i class="fas fa-database"></i> SQL</span>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Avatar Card -->
+        <div class="about-avatar-wrap reveal-left">
+          <div class="about-avatar-card glass-card">
+            <div class="avatar-initials">BBP</div>
+            <div class="avatar-glow"></div>
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="floating-icon fi-1"><i class="fab fa-python"></i></div>
+            <div class="floating-icon fi-2"><i class="fab fa-react"></i></div>
+            <div class="floating-icon fi-3"><i class="fas fa-server"></i></div>
+            <div class="floating-icon fi-4"><i class="fas fa-database"></i></div>
+          </div>
+        </div>
+
+        <!-- About Text -->
+        <div class="about-text reveal-right">
+          <h3 class="about-subtitle">Python Full Stack Developer</h3>
+          <p class="about-intro">
+            I'm a passionate Python Full Stack Developer with a strong foundation in both backend and frontend technologies. I specialize in building robust, scalable web applications using Python, Django, and modern JavaScript frameworks.
+          </p>
+          <p class="about-career">
+            <strong>Career Objective:</strong> To leverage my full-stack development skills in a dynamic organization where I can contribute meaningfully, grow professionally, and deliver impactful digital solutions that solve real-world problems.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Odisha, India</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>M.Sc Computer Science</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-code"></i>
+              <span>Full Stack Developer</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Available for Opportunities</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary mt-2">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid reveal-up">
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-code"></i></div>
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="stat-number" data-target="14">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-icon"><i class="fas fa-star"></i></div>
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Commitment %</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="skill-tabs reveal-up">
+        <button class="skill-tab active" data-tab="all">All</button>
+        <button class="skill-tab" data-tab="backend">Backend</button>
+        <button class="skill-tab" data-tab="frontend">Frontend</button>
+        <button class="skill-tab" data-tab="database">Database &amp; Tools</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+
+        <!-- Backend -->
+        <div class="skill-card glass-card reveal-up" data-category="backend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#3776AB,#1a4d6b)">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">Python</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="backend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#092E20,#1a5c3a)">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">Django</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="backend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#FF6B35,#cc4c1a)">
+            <i class="fas fa-plug"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">REST APIs</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="backend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#764ABC,#4b2e7a)">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">MVC Architecture</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card glass-card reveal-up" data-category="frontend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#F7DF1E,#c4ae00)">
+            <i class="fab fa-js-square" style="color:#1a1a1a"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="frontend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#61DAFB,#1a99c2)">
+            <i class="fab fa-react" style="color:#1a1a1a"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">React.js</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="frontend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#E34F26,#b33c1a)">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">HTML5</span>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="frontend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#1572B6,#0d4f82)">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">CSS3</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="frontend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#7952B3,#4e2e80)">
+            <i class="fab fa-bootstrap"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">Bootstrap</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="frontend">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#FF6B6B,#cc3333)">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">Responsive Design</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+        </div>
+
+        <!-- Database & Tools -->
+        <div class="skill-card glass-card reveal-up" data-category="database">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#4479A1,#2a5070)">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">MySQL</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="database">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#F80000,#a00000)">
+            <i class="fas fa-circle-nodes"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">Oracle SQL Plus</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="database">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#F05032,#b33520)">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">Git &amp; GitHub</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-category="database">
+          <div class="skill-card-icon" style="background:linear-gradient(135deg,#00BFFF,#007a9e)">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">UI/UX Development</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+
+      </div><!-- /skills-grid -->
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal-up">
+          <div class="project-card-top">
+            <div class="project-number">01</div>
+            <div class="project-links">
+              <a href="#" class="project-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-mockup mockup-slider">
+            <div class="mockup-screen">
+              <div class="mockup-slider-visual">
+                <div class="ms-cube"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">3D Rotating Image Slider</h3>
+            <p class="project-desc">Interactive 3D rotating image slider with stunning CSS animations, smooth transitions, and fully responsive design that adapts to any screen size.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+              <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal-up">
+          <div class="project-card-top">
+            <div class="project-number">02</div>
+            <div class="project-links">
+              <a href="#" class="project-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-mockup mockup-calc">
+            <div class="mockup-screen">
+              <div class="mockup-calc-visual">
+                <div class="calc-display">12 + 8 = 20</div>
+                <div class="calc-buttons">
+                  <span>7</span><span>8</span><span>9</span><span class="op">÷</span>
+                  <span>4</span><span>5</span><span>6</span><span class="op">×</span>
+                  <span>1</span><span>2</span><span>3</span><span class="op">-</span>
+                  <span class="zero">0</span><span>.</span><span class="op">+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Calculator Web Application</h3>
+            <p class="project-desc">Responsive calculator with all arithmetic operations, real-time display updates, keyboard support, and a clean modern UI built with vanilla JavaScript.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+              <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+              <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal-up">
+          <div class="project-card-top">
+            <div class="project-number">03</div>
+            <div class="project-links">
+              <a href="#" class="project-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-mockup mockup-portfolio">
+            <div class="mockup-screen">
+              <div class="mockup-portfolio-visual">
+                <div class="mp-bar mp-bar-1"></div>
+                <div class="mp-bar mp-bar-2"></div>
+                <div class="mp-bar mp-bar-3"></div>
+                <div class="mp-circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">Responsive developer portfolio with scroll animations, modern glassmorphism UI, dynamic typing effects, particle background, and a professional design tailored for recruiters.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+              <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+              <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Experience &amp; <span class="gradient-text">Strengths</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Timeline left -->
+        <div class="exp-timeline reveal-left">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-tag">Fresher</span>
+              <h3>Python Full Stack Developer</h3>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 – Present</span>
+              <p>Developing full-stack web applications using Python and Django on the backend with React.js and vanilla JavaScript on the frontend. Building RESTful APIs and responsive interfaces.</p>
+              <div class="tl-skills">
+                <span>Python</span><span>Django</span><span>React.js</span><span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-tag">Academic</span>
+              <h3>Web Development Projects</h3>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023 – 2024</span>
+              <p>Designed and developed multiple academic and personal projects including a 3D Image Slider, Calculator App, and Portfolio Website demonstrating proficiency in frontend technologies.</p>
+              <div class="tl-skills">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strengths right -->
+        <div class="strengths-grid reveal-right">
+          <h3 class="strengths-title">Core Strengths</h3>
+          <div class="strength-card glass-card">
+            <div class="strength-icon"><i class="fas fa-bolt"></i></div>
+            <div>
+              <h4>Quick Learner</h4>
+              <p>Rapidly adapts to new technologies and frameworks with minimal guidance.</p>
+            </div>
+          </div>
+          <div class="strength-card glass-card">
+            <div class="strength-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <div>
+              <h4>Problem Solving</h4>
+              <p>Analytical mindset — breaks complex challenges into elegant, maintainable solutions.</p>
+            </div>
+          </div>
+          <div class="strength-card glass-card">
+            <div class="strength-icon"><i class="fas fa-comments"></i></div>
+            <div>
+              <h4>Communication Skills</h4>
+              <p>Articulates technical concepts clearly to both technical and non-technical stakeholders.</p>
+            </div>
+          </div>
+          <div class="strength-card glass-card">
+            <div class="strength-icon"><i class="fas fa-sync-alt"></i></div>
+            <div>
+              <h4>Adaptability</h4>
+              <p>Thrives in dynamic environments and embraces change as an opportunity to grow.</p>
+            </div>
+          </div>
+          <div class="strength-card glass-card">
+            <div class="strength-icon"><i class="fas fa-users"></i></div>
+            <div>
+              <h4>Teamwork</h4>
+              <p>Collaborative spirit with a proactive approach to achieving shared goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="edu-timeline">
+
+        <div class="edu-item reveal-up">
+          <div class="edu-dot-wrap">
+            <div class="edu-dot"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-card glass-card">
+            <div class="edu-card-header">
+              <span class="edu-tag">Post Graduate</span>
+              <span class="edu-year">2023 – 2025</span>
+            </div>
+            <h3>M.Sc Computer Science</h3>
+            <p class="edu-institute"><i class="fas fa-university"></i> Bhadrak Autonomous College</p>
+            <p class="edu-desc">Comprehensive study of advanced computer science concepts including data structures, architecture, database management, software engineering, and C++ Programming.</p>
+            <div class="edu-highlights">
+              <span>Data Structures</span>
+              <span>Architecture</span>
+              <span>DBMS</span>
+              <span>C++ Programming</span>
+              <span>Software Engineering</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS SECTION ========== -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cert-grid">
+
+        <div class="cert-card glass-card reveal-up">
+          <div class="cert-icon" style="background:linear-gradient(135deg,#3776AB,#1a4d6b)">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Python Programming</h4>
+            <p>Core Python, OOP, File Handling, Modules</p>
+            <span class="cert-issuer"><i class="fas fa-award"></i> JSpider's Training Institute</span>
+          </div>
+          <div class="cert-badge">✓ Verified</div>
+        </div>
+
+        <div class="cert-card glass-card reveal-up">
+          <div class="cert-icon" style="background:linear-gradient(135deg,#092E20,#1a5c3a)">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Django Web Framework</h4>
+            <p>MVC, ORM, REST APIs, Authentication</p>
+            <span class="cert-issuer"><i class="fas fa-award"></i> Udemy</span>
+          </div>
+          <div class="cert-badge">✓ Verified</div>
+        </div>
+
+        <div class="cert-card glass-card reveal-up">
+          <div class="cert-icon" style="background:linear-gradient(135deg,#61DAFB,#1a99c2)">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="cert-content">
+            <h4>React.js Fundamentals</h4>
+            <p>Components, Hooks, State Management</p>
+            <span class="cert-issuer"><i class="fas fa-award"></i> Meta / Coursera</span>
+          </div>
+          <div class="cert-badge">✓ Verified</div>
+        </div>
+
+        <div class="cert-card glass-card reveal-up">
+          <div class="cert-icon" style="background:linear-gradient(135deg,#F7DF1E,#c4ae00)">
+            <i class="fab fa-js-square" style="color:#1a1a1a"></i>
+          </div>
+          <div class="cert-content">
+            <h4>JavaScript ES6+</h4>
+            <p>DOM, Async/Await, Fetch API, ES6 Features</p>
+            <span class="cert-issuer"><i class="fas fa-award"></i> JSpider's Training Institute</span>
+          </div>
+          <div class="cert-badge">✓ Verified</div>
+        </div>
+
+        <div class="cert-card glass-card reveal-up">
+          <div class="cert-icon" style="background:linear-gradient(135deg,#4479A1,#2a5070)">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="cert-content">
+            <h4>SQL &amp; Database Design</h4>
+            <p>MySQL, Oracle SQL Plus, Query Optimization</p>
+            <span class="cert-issuer"><i class="fas fa-award"></i> JSpider's Training Institute</span>
+          </div>
+          <div class="cert-badge">✓ Verified</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESUME DOWNLOAD SECTION ========== -->
+  <section class="section resume-section" id="resume">
+    <div class="container">
+      <div class="resume-banner glass-card reveal-up">
+        <div class="resume-banner-content">
+          <div class="resume-icon-wrap">
+            <i class="fas fa-file-code"></i>
+          </div>
+          <div>
+            <h2>Ready to Work Together?</h2>
+            <p>Download my resume to learn more about my skills, education, and projects. Let's build something amazing!</p>
+          </div>
+        </div>
+        <div class="resume-actions">
+          <a href="#" class="btn btn-primary btn-lg" id="resumeDownload2">
+            <i class="fas fa-download"></i> Download Resume (PDF)
+          </a>
+          <a href="#contact" class="btn btn-outline btn-lg">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">I'm currently open to new opportunities. Whether you have a question, project idea, or just want to say hi — my inbox is always open!</p>
+
+         <div class="contact-items">
+            <a href="mailto:barshamamali15@gmail.com" class="contact-item glass-card">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="ci-label">Email</span>
+                <span class="ci-value">barshamamali15@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919999999999" class="contact-item glass-card">
+              <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <span class="ci-label">Phone</span>
+                <span class="ci-value">+91 99999 99999</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/barsha-baishakhi-prusty-675580323" target="_blank" class="contact-item glass-card">
+              <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="ci-label">LinkedIn</span>
+                <span class="ci-value">linkedin.com/in/barsha-baishakhi</span>
+              </div>
+            </a>
+            <a href="https://github.com/barshabaishakhi-pythonfs" target="_blank" class="contact-item glass-card">
+              <div class="ci-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="ci-label">GitHub</span>
+                <span class="ci-value">github.com/barshabaishakhi</span>
+              </div>
+            </a>
+          </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="contact-form glass-card">
+            <h3>Send a Message</h3>
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="contactName" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" id="contactEmail" placeholder="john@email.com" />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" id="contactSubject" placeholder="Job Opportunity / Project" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="contactMessage" placeholder="Tell me about your project or opportunity..." rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" id="sendMessage">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-bracket">&lt;</span>BBP<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Python Full Stack Developer crafting elegant digital experiences.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/barshabaishakhi-pythonfs" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/barsha-baishakhi-prusty-675580323" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:barshamamali15@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Technologies</h4>
+          <ul>
+            <li><a href="#skills">Python &amp; Django</a></li>
+            <li><a href="#skills">React.js</a></li>
+            <li><a href="#skills">REST APIs</a></li>
+            <li><a href="#skills">SQL Databases</a></li>
+            <li><a href="#skills">HTML / CSS / JS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Barsha Baishakhi Prusty. Built with <i class="fas fa-heart" style="color:#ff6b6b"></i> and passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="./My Resume.js"></script>
+</body>
+</html>
